@@ -1,27 +1,31 @@
 :root {
     --blanco-trs: rgba(255, 255, 255, 0.4);
-    --primario: #2563eb;
+    --primario: #C99748;
     --oscuro: #1e293b;
     --fondo: #f8fafc;
     --texto: #334155;
 }
 
+
 body {
     background-color: var(--fondo);
-    background-image: radial-gradient(circle, #edd160 5px, transparent 1px);
-    background-size: 15px 15px;
+    background-image: radial-gradient(circle, #E9BD6C 2px, transparent 1px);
+    background-size: 25px 25px;
+    padding-top: 80px;
     text-align: center;
-    color: var(--primario);
     font-family: "Gill Sans", sans-serif;
     margin: 0;
-    padding-top: 80px;
 }
 
-footer{
-    position:absolute;
+footer {
+    position:static;
     bottom: 0;
     width: 100%;
-    height: 70px;
+    height: 50px;
+    background-color:#E9BD6C;
+    text-align: left;
+    border-radius: 4%;
+    font-size: small;
 }
 
 .navbar {
@@ -60,16 +64,27 @@ footer{
     transition: 0.3s;
 }
 
-.nav-menu a:hover { color: #fff; background: var(--primario); padding: 5px 10px;border-radius: 8px; }
-
-
-.ContenedorGaleria {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px;
-    padding: 20px 10%;
+.nav-menu a:hover {
+    color: #fff;
+    background: var(--primario);
+    padding: 5px 10px;
+    border-radius: 8px;
 }
 
+
+/* .ContenedorGaleria {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    padding: 20px 10%;
+} */
+ .ContenedorGaleria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
 .Tarjeta {
     position: relative;
     overflow: hidden;
@@ -91,41 +106,25 @@ footer{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(37, 99, 235, 0.75);
+    background: rgb(233, 189, 108, 0.75);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    /* padding: 20px; */
     text-align: center;
     transition: opacity 0.3s ease;
 }
 
-.texto2 {
-    opacity: 0;
-    position: absolute;
+h1 {
+    opacity: 1;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(37, 235, 67, 0.75);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
-    transition: opacity 0.3s ease;
-}
-.texto3 {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(230, 246, 55, 0.75);
-    color: white;
+    background: rgba(241, 239, 218, 0.75);
+    color:#C99748;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -134,18 +133,63 @@ footer{
     transition: opacity 0.3s ease;
 }
 
+.titulo .texto {
+    opacity: 1;
+}
 
+.titulo img {
+    object-fit: cover;
+}
 
 .Tarjeta:hover .texto {
-    opacity: 1;
-}
-.Tarjeta:hover .texto2 {
-    opacity: 1;
-}
-.Tarjeta:hover .texto3 {
     opacity: 1;
 }
 
 .Tarjeta:hover img {
     transform: scale(1.1);
+}
+
+.ContenedorGaleria2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+.Tarjeta2{
+    background-color: #463527;
+    border-radius: 12px;
+    border: none;
+    padding: 15px;
+    box-shadow: 0px 4px 3px rgba(0,0,0,0.3) ;
+    color: #E9D5A0;
+    flex: 1 0 250px;
+    max-width: 400px;
+}
+.oferta{
+    text-decoration: line-through;
+    color: #9ea0a1;
+    opacity: 1;
+}
+.precio{
+    opacity: 1;
+}
+button{
+    color: #463527;
+    background-color: #c09470;
+    border: none;
+    max-height: 50px;
+}
+button:hover{
+    background-color: #E9BD6C;
+}
+input{
+    margin-bottom: 10px;
+}
+
+.formulario{
+    display: flex;
+}
+.paddingForm{
+    margin: 5px;
 }
