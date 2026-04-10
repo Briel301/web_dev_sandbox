@@ -214,14 +214,14 @@ input{
     margin-top: 15px;
     color: var(--oscuro);
 }
-.ButtonComprar{
+.ButtonLimpiar{
     margin-top: 10px; 
     background-color: #ff4444; 
     color: white;
     margin: 1%;
 }
-.ButtonLimpiar {
-    background-color: green;
+.ButtonComprar {
+    background-color: #008000;
     margin-top: 10px; 
     color: white;
     margin: 1%;
